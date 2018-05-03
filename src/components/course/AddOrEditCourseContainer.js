@@ -36,17 +36,19 @@ export class AddOrEditCourseContainer extends React.Component {
     handleSave(values) {
         const course = {
             id: values.id,
-            title: values.title,
-            watchHref: values.watchHref,
-            authorId: values.authorId,
-            length: values.length,
-            category: values.category
+            name: values.name,
+            description: values.description,
+            adImageUrl: values.adImageUrl,
+            rate: values.rate,
+            category: values.category,
+            contact: values.contact,
+            url: values.url
         };
 
         this.props.action.saveCourseAction(course)
             .then(() => {
-                toastr.success('Course saved');
-                this.props.history.push('/courses');
+                toastr.success('Experience saved');
+                this.props.history.push('/experiences');
             }).catch(error => {
                 toastr.error(error);
             });
@@ -56,7 +58,7 @@ export class AddOrEditCourseContainer extends React.Component {
 
     handleCancel(event) {
         event.preventDefault();
-        this.props.history.replace('/courses');
+        this.props.history.replace('/experiences');
     }
 
 

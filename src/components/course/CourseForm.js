@@ -11,32 +11,57 @@ export const CourseForm = ({ handleSubmit, pristine, reset, submitting, heading,
 
             <Field
                 type="text"
-                name="title"
-                label="Title"
-                placeholder="Title of the course"
+                name="name"
+                label="Name"
+                placeholder="Name"
                 component={FieldInput}
             />
 
             <Field
-                name="authorId"
-                label="Author"
-                options={authors}
-                component={SelectInput}
+                type="text"
+                name="description"
+                label="Description"
+                placeholder="Description"
+                component={FieldInput}
+            />
+
+            <Field
+                type="text"
+                name="adImageUrl"
+                label="Ad Image URL"
+                placeholder="Ad Image URL"
+                component={FieldInput}
+            />
+
+            <Field
+                type="text"
+                name="rate"
+                label="Rate"
+                placeholder="Rate"
+                component={FieldInput}
             />
 
             <Field
                 type="text"
                 name="category"
                 label="Category"
-                placeholder="Category of the course"
+                placeholder="Category"
                 component={FieldInput}
             />
 
             <Field
                 type="text"
-                name="length"
-                label="Length"
-                placeholder="Lenght of course in minutes or hours"
+                name="contact"
+                label="Contact"
+                placeholder="Contact"
+                component={FieldInput}
+            />
+
+            <Field
+                type="text"
+                name="url"
+                label="Website"
+                placeholder="Website"
                 component={FieldInput}
             />
 
@@ -58,20 +83,16 @@ export const CourseForm = ({ handleSubmit, pristine, reset, submitting, heading,
 const validate = values => {
     const errors = {};
 
-    if (!values.title) {
-        errors.title = 'Required';
+    if (!values.name) {
+        errors.name = 'Required';
     }
 
-    if (!values.category) {
-        errors.category = 'Required';
+    if (!values.rate) {
+        errors.rate = 'Required';
     }
 
-    if (!values.length) {
-        errors.length = 'Required';
-    }
-
-    if (!values.authorId) {
-        errors.authorId = 'Required';
+    if (!values.adImageUrl) {
+        errors.adImageUrl = 'Required';
     }
 
     return errors;

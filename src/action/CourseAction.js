@@ -108,3 +108,23 @@ export function deleteCourseAction(courseId) {
             });
     };
 }
+
+export function tweakEnabledCourseAction(courseId) {
+    return (dispatch) => {
+
+        dispatch(ApiCallBeginAction());
+
+        return CourseApi.tweakEnabledCourse(courseId)
+            .then(() => {
+                dispatch(tweakEnabledCourseResponse());
+            }).then(() => {
+                dispatch(getCoursesAction());
+            }).catch(error => {
+                throw error;
+            });
+    };
+}
+
+export const tweakEnabledCourseResponse = () => ({
+    type: ActionType.TWEAK_ENABLED_COURSE_RESPONSE
+});

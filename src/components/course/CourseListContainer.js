@@ -17,6 +17,7 @@ export class CourseListContainer extends React.Component {
         this.handleAddCourse = this.handleAddCourse.bind(this);
         this.handleEditCourse = this.handleEditCourse.bind(this);
         this.handleDelete = this.handleDelete.bind(this);
+        this.handleTweakEnabled = this.handleTweakEnabled.bind(this);
         this.handleRowSelect = this.handleRowSelect.bind(this);
     }
 
@@ -31,7 +32,7 @@ export class CourseListContainer extends React.Component {
 
 
     handleAddCourse() {
-        this.props.history.push('/course');
+        this.props.history.push('/experience');
     }
 
 
@@ -41,7 +42,7 @@ export class CourseListContainer extends React.Component {
 
         if (selectedCourseId) {
             this.setState({selectedCourseId: undefined});            
-            this.props.history.push(`/course/${selectedCourseId}`);
+            this.props.history.push(`/experience/${selectedCourseId}`);
         }        
     }
 
@@ -59,7 +60,17 @@ export class CourseListContainer extends React.Component {
         }
     }
 
+    handleTweakEnabled() {
+        const selectedCourseId = this.state.selectedCourseId;
 
+        if (selectedCourseId) {
+            this.setState({selectedCourseId: undefined});                        
+            this.props.action.tweakEnabledCourseAction(selectedCourseId)
+                .catch(error => {
+                    toastr.error(error);
+                });
+        }
+    }
 
     handleRowSelect(row, isSelected) {
         if (isSelected) {
@@ -82,7 +93,7 @@ export class CourseListContainer extends React.Component {
             <div className="container-fluid">
                 <div className="row mt-3">
                     <div className="col">
-                        <h1>Courses</h1>                        
+                        <h1>Your local experience partners</h1>                        
                     </div>
                 </div>
 
@@ -111,6 +122,14 @@ export class CourseListContainer extends React.Component {
                                 onClick={this.handleDelete}
                             >
                                 <i className="fa fa-trash-o" aria-hidden="true" onClick={this.handleDelete}/> Delete
+                            </button>
+
+                            <button
+                                type="button"
+                                className="btn btn-primary ml-2"
+                                onClick={this.handleTweakEnabled}
+                            >
+                                <i className="fa fa-pencil" aria-hidden="true" onClick={this.handleTweakEnabled}/> Enable/Disable
                             </button>
                         </div>
                     </div>
