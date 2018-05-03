@@ -23,9 +23,9 @@ const App = () => {
 
                     <Switch>
                         <Route exact path="/" component={Home} />
-                        <Route path="/courses" component={CourseListContainer} />
-                        <Route exact path="/course" component={AddOrEditCourseContainer} />
-                        <Route path="/course/:id" component={AddOrEditCourseContainer} />
+                        <Route path="/experiences" component={CourseListContainer} />
+                        <Route exact path="/experience" component={AddOrEditCourseContainer} />
+                        <Route path="/experience/:id" component={AddOrEditCourseContainer} />
                         <Route path="/about" component={About} />
                         <Route component={PageNotFound} />
                     </Switch>

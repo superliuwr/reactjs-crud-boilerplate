@@ -1,23 +1,23 @@
 import React from 'react';
-import reactjs from '../../img/reactjs.jpg';
-import createReactApp from '../../img/createReactApp.jpg';
-import reactrouter4 from '../../img/reactrouter4.jpg';
-import bootstrap4 from '../../img/bootstrap4.jpg';
+import step1 from '../../img/1.png';
+import step2 from '../../img/2.png';
+import step3 from '../../img/3.png';
+import step4 from '../../img/4.png';
 
 
 
 const Section = () => {
     return (
-
         <section className="row">
+
             <div className="col-md-6 col-lg-3">
                 <div className="card">
                     <a href="https://facebook.github.io/react" target="_blank">
-                        <img src={reactjs} className="card-img-top img-fluid" alt="ReactJS"/>
+                        <img src={step1} className="card-img-top img-fluid" alt="step 1"/>
                     </a>
                     <div className="card-block">
-                        <h3 className="card-title">ReactJS</h3>
-                        <p>ReactJS/Redux using the ES2015 (ES6) syntax.</p>
+                        <h3 className="card-title">Step 1</h3>
+                        <p>Sign contract with your local experience providers.</p>
                     </div>
                 </div>
             </div>
@@ -26,11 +26,11 @@ const Section = () => {
             <div className="col-md-6 col-lg-3">
                 <div className="card">
                     <a href="https://github.com/facebookincubator/create-react-app" target="_blank">
-                        <img src={createReactApp} className="card-img-top img-fluid" alt="Create React App"/>
+                        <img src={step2} className="card-img-top img-fluid" alt="step 2"/>
                     </a>
                     <div className="card-block">
-                        <h3 className="card-title">create-react-app</h3>
-                        <p>Official. No Setup. Built in HMR, ESLint, Jest, Coverage</p>
+                        <h3 className="card-title">Step 2</h3>
+                        <p>Add them to your system.</p>
                     </div>
                 </div>
             </div>
@@ -38,11 +38,11 @@ const Section = () => {
             <div className="col-md-6 col-lg-3">
                 <div className="card">
                     <a href="https://reacttraining.com/react-router" target="_blank">
-                        <img src={reactrouter4} className="card-img-top img-fluid" alt="React Router 4"/>
+                        <img src={step3} className="card-img-top img-fluid" alt="step 3"/>
                     </a>
                     <div className="card-block">
-                        <h3 className="card-title">React Router 4</h3>
-                        <p>Declarative routing for ReactJS apps.</p>
+                        <h3 className="card-title">Step 3</h3>
+                        <p>Enable at least 3 of them in your system.</p>
                     </div>
                 </div>
             </div>
@@ -50,11 +50,11 @@ const Section = () => {
             <div className="col-md-6 col-lg-3">
                 <div className="card">
                     <a href="http://v4-alpha.getbootstrap.com" target="_blank">
-                    <img src={bootstrap4} className="card-img-top img-fluid" alt="Bootstrap 4" />
+                    <img src={step4} className="card-img-top img-fluid" alt="step 4" />
                     </a>
                     <div className="card-block">
-                        <h3 className="card-title">Bootstrap 4</h3>
-                        <p>A framework for styling apps for all screen sizes.</p>
+                        <h3 className="card-title">Step 4</h3>
+                        <p>Receive a commission fee for every click.</p>
                     </div>
                 </div>
             </div>
