@@ -30,7 +30,7 @@ const Section = () => {
                     </a>
                     <div className="card-block">
                         <h3 className="card-title">Step 2</h3>
-                        <p>Add them to your system.</p>
+                        <p>Add the providers to your system.</p>
                     </div>
                 </div>
             </div>
