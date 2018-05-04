@@ -64,7 +64,7 @@ export class CourseListContainer extends React.Component {
         const selectedCourseId = this.state.selectedCourseId;
 
         if (selectedCourseId) {
-            this.setState({selectedCourseId: undefined});                        
+            // this.setState({selectedCourseId: undefined});                        
             this.props.action.tweakEnabledCourseAction(selectedCourseId)
                 .catch(error => {
                     toastr.error(error);
